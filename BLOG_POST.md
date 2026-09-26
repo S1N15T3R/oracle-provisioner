@@ -1,3 +1,5 @@
+![Outsmarting The Bots: How to Catch an Oracle Always Free ARM Server](images/blog_cover.png)
+
 # How to Outsmart the Bots and Actually Get an Oracle Always Free ARM Server
 
 If you have ever tried provisioning an **Always Free Ampere A1** instance on Oracle Cloud Infrastructure (OCI) in places like Mumbai, Frankfurt, Tokyo, or Phoenix, you already know the drill:
