@@ -1,0 +1,26 @@
+[Unit]
+Description=OCI Compute Instance Provisioner - Autonomous Always Free Catcher
+Documentation=https://github.com/S1N15T3R/oracle-provisioner
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+# Path to your oci_provision.sh script (%h represents the user home directory)
+ExecStart=/bin/bash %h/development/oracle-provisioner/oci_provision.sh
+ExecStop=/bin/kill -TERM $MAINPID
+Restart=always
+RestartSec=30
+StandardOutput=append:%h/.oci/provisioner.log
+StandardError=append:%h/.oci/provisioner.log
+Environment="PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin"
+
+# Security & Sandboxing
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=%h/.oci %h/development
+
+[Install]
+WantedBy=default.target

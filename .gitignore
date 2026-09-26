@@ -1,0 +1,29 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Secrets & Environment (NEVER COMMIT)
+# ═══════════════════════════════════════════════════════════════════════════════
+config.env
+.env
+*.env
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# OCI CLI & SDK Credentials
+.oci/
+*.oci_config
+oci_api_key*
+
+# Runtime State & Logs
+*.log
+*.lock
+provisioner.log
+provisioner.lock
+
+# Temporary and Editor Files
+*.swp
+*.swo
+*~
+.DS_Store
+.idea/
+.vscode/
